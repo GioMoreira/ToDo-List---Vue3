@@ -2,7 +2,8 @@
     <input type="text" @change="addToList" v-model="text">
     <ul>
         <li v-for="(item, index) in list" ::key="index">
-            {{item}}
+           <span>{{item}}</span> 
+           <span @click="deleteFromList(index)"> || delete</span>
         </li>
     </ul>
 </template>
@@ -15,10 +16,23 @@ export default {
             text: ''
         }
     },
+
+    created() {
+        this.list = JSON.parse(localStorage.getItem('list')) || []; // JSON.parse -> string para array
+    },
     methods: {
         addToList() {
-            this.list.unshift(this.text);
+            this.list.unshift(this.text); //adiciona como primeiro elemento da lista
+            this.updateLocalStorage();
             this.text = '';
+        },
+        deleteFromList(index) {
+            this.list.splice(index, 1);
+            this.updateLocalStorage();
+           
+        },
+        updateLocalStorage() {
+            localStorage.setItem('list', JSON.stringify(this.list));  // JSON.stringfy -> array para string
         }
     }
 }
