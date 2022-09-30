@@ -45,19 +45,24 @@ export default {
 <style>
     .todo-list{
         max-width: 500px;
+        padding: 10px;
         margin: auto;
+        background: #f9dcc4 ;
+        border-radius: 10px;
+        border: 1px solid #b5838d;
         
     }
 
     h1 {
         text-align: center;
-        font-family: 'Cinzel', serif;
+        
+        
     }
 
     .text-field {
         width: 100%;
         height: 35px;
-        margin-bottom: 15px;
+        margin: 10px 0 30px 0;;
         border-radius: 5px;
     }
 
@@ -70,19 +75,22 @@ export default {
         display: flex;
         justify-content: space-between;
         margin-bottom: 5px;
-        font-family: sans-serif;
+        font-size: 16px;
+        font-family: 'Lato', sans-serif;
     }
 
     .delete-btn {
-        background: grey;
+        background: #b5838d;
         border: 1px solid white;
-        width: 18px;
+        width: 20px;
         padding: 2px;
         border-radius: 3px;
         display: flex;
         justify-content: center;
         font-weight: bold;
         margin-left: 8px ;
+        color: #fff;
+        cursor: pointer;
     }
 
 </style>

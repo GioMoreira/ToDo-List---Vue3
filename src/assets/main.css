@@ -1,6 +1,11 @@
 @import "./base.css";
-@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Lato&display=swap');
 
+body {
+  background: #fec89a;
+  color: #6d6875;
+  font-family: 'Cinzel', serif;
+}
 
 #app {
 
