@@ -5,8 +5,8 @@
     <ul>
       <li v-for="(item, index) in list" ::key="index">
         <span @click="toggleCheckbox(item)">
-          <input type="checkbox" :checked="item.done">
-          {{ item.label }}
+          <input type="checkbox" :checked="item.done">        
+          <span :class="{'done' : item.done}">{{ item.label }}</span>
         </span>
         <span class="delete-btn material-symbols-outlined" @click="deleteFromList(index)"> 
           X
@@ -102,4 +102,9 @@ export default {
         cursor: pointer;
     }
 
+    .done{
+      text-decoration: line-through;
+    }
+
+    
 </style>
